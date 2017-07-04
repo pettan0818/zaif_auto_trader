@@ -83,9 +83,16 @@ class DataPullExecuter():
         except zaif.ZaifApiError:
             pass
 
-    def recover(self):
+    def execute_with_recover(self):
         """recovery data method."""
-        pass
+        while True:
+            try:
+                self.execute()
+            except Exception as err:
+                print(err.args)
+                import sys
+                print(sys.exc_info())
+
 
 
 def main(db_name="./tester.db"):
