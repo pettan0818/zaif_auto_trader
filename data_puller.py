@@ -76,7 +76,7 @@ class DataPullExecuter():
                 self.latest_tid = trading_newest_data_df.tid.max()
                 # 差分をSQLに突っ込む
                 diff_df.to_sql(DB_TABLE, self.db_con, if_exists="append")
-                print(diff_df)
+                # print(diff_df)
                 if diff_df.shape[0] == 0:
                     time.sleep(2)
 
