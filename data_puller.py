@@ -79,9 +79,8 @@ class DataPullExecuter():
                 # print(diff_df)
                 if diff_df.shape[0] == 0:
                     time.sleep(2)
-
-        except zaif.ZaifApiError:
-            pass
+        except Exception as err:
+            raise(err)
 
     def execute_with_recover(self):
         """recovery data method."""
