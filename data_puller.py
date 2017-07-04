@@ -104,7 +104,7 @@ def main(db_name="./tester.db"):
     DB_ADDRESS = "sqlite:///{}".format(db_name)
 
     executer = DataPullExecuter()
-    executer.execute()
+    executer.execute_with_recover()
 
     sys.exit(2)
 
