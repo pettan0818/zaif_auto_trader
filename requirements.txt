@@ -73,7 +73,7 @@ Theano==0.9.0
 tornado==4.5.1
 tqdm==4.14.0
 traitlets==4.3.2
-urllib3==1.21.1
+urllib3==1.26.5
 wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.44.0
